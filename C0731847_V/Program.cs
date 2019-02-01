@@ -10,6 +10,21 @@ namespace C0731847_V
     {
         static void Main(string[] args)
         {
+
+        }
+        class village
+        {
+            bool isAstrildeHere;
+            village nextvillage;
+            village prevvillage;
+            String villagename;
+
+        }
+        class countryside
+        {
+            village mapple;
+            village toronto;
+            village ajax;
         }
     }
 }

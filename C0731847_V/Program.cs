@@ -28,13 +28,20 @@ namespace C0731847_V
             Village maple;
             Village Toronto;
             Village ajax;
+            Village Head;
+            Village Tale;
             public void run()
             {
                 maple = new Village();
                 Toronto = new Village();
                 ajax = new Village();
-                maple.Villagename = "Toronto";
+                ajax.Villagename = "ajax";
+                ajax.isAstrildeHere = true;
+                maple.Villagename = "maple";
                 maple.nextVillage = Toronto;
+                Toronto.nextVillage = ajax;
+                Toronto.Villagename = "Toronto";
+                ajax.nextVillage = null;
             }
         }
         class LearningExperiment
@@ -62,15 +69,29 @@ namespace C0731847_V
             public void travel()
             {
                 Village currentvillage = Toronto;
-                while (!currentvillage.isAstrildeHere)
+
+                while (true)
+
                 {
                     if (currentvillage.isAstrildeHere)
-                        Console.WriteLine("You found Astrilde in " + currentvillage);
+                    {
+                        Console.WriteLine(" Astrilde is  in " + currentvillage.Villagename);
+                        Console.ReadLine();
+                    }
                     else
-                        currentvillage = currentvillage.nextVillage;
+                    { currentvillage = currentvillage.nextVillage; }
 
+
+                    while (currentvillage.nextVillage != null)
+                    {
+                        Console.WriteLine(" I am in " + currentvillage.Villagename);
+                        if (currentvillage.isAstrildeHere)
+                            Console.WriteLine("You found Astrilde in " + currentvillage);
+                        else
+                            currentvillage = currentvillage.nextVillage;
+
+                    }
                 }
-
             }
         }
     }

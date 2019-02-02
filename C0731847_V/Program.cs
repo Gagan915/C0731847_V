@@ -12,24 +12,24 @@ namespace C0731847_V
         {
             countryside c  = new countryside();
         }
-        class village
+        class Village
         {
           public  bool isAstrildeHere;
-           public  village nextvillage;
-          public  village prevvillage;
-          public  string villagename;
+           public  Village nextVillage;
+          public  Village prevVillage;
+          public  string Villagename;
 
         }
         class countryside
         {
-            village maple;
-            village Toronto;
-            village ajax;
+            Village maple;
+            Village Toronto;
+            Village ajax;
             public void run()
             {
-                maple = new village();
-                maple.villagename = "Toronto";
-                maple.nextvillage = Toronto;
+                maple = new Village();
+                maple.Villagename = "Toronto";
+                maple.nextVillage = Toronto;
             }
         }
     }

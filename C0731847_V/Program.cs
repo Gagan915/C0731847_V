@@ -10,7 +10,7 @@ namespace C0731847_V
     {
         static void Main(string[] args)
         {
-
+            countryside c  = new countryside();
         }
         class village
         {

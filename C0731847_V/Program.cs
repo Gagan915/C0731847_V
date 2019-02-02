@@ -14,17 +14,23 @@ namespace C0731847_V
         }
         class village
         {
-            bool isAstrildeHere;
-            village nextvillage;
-            village prevvillage;
-            String villagename;
+          public  bool isAstrildeHere;
+           public  village nextvillage;
+          public  village prevvillage;
+          public  string villagename;
 
         }
         class countryside
         {
-            village mapple;
-            village toronto;
+            village maple;
+            village Toronto;
             village ajax;
+            public void run()
+            {
+                maple = new village();
+                maple.villagename = "Toronto";
+                maple.nextvillage = Toronto;
+            }
         }
     }
 }

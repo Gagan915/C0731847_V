@@ -28,6 +28,8 @@ namespace C0731847_V
             public void run()
             {
                 maple = new Village();
+                Toronto = new Village();
+                ajax = new Village();
                 maple.Villagename = "Toronto";
                 maple.nextVillage = Toronto;
             }

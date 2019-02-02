@@ -10,7 +10,9 @@ namespace C0731847_V
     {
         static void Main(string[] args)
         {
-            countryside c  = new countryside();
+            //countryside c  = new countryside();
+            //c.run();
+            (new LearningExperiment()).run();
         }
         class Village
         {

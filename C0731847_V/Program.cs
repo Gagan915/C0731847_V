@@ -34,5 +34,27 @@ namespace C0731847_V
                 maple.nextVillage = Toronto;
             }
         }
+        class LearningExperiment
+        {
+            public void run()
+            {
+                Village Toronto;
+                Toronto = new Village();
+                Village a, b, c;
+                Toronto.Villagename = "version A";
+                a = Toronto;
+                Console.WriteLine(a.Villagename);
+                Toronto = new Village();
+                Toronto = new Village();
+                Toronto.Villagename = "version B";
+                b = Toronto;
+                Console.WriteLine(b.Villagename);
+                Toronto = new Village();
+                Toronto.Villagename = "version C";
+                c = Toronto;
+                Console.WriteLine(c.Villagename);
+            }
+
+        }
     }
 }

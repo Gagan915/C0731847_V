@@ -10,18 +10,19 @@ namespace C0731847_V
     {
         static void Main(string[] args)
         {
-            //countryside c  = new countryside();
-            //c.run();
-            (new LearningExperiment()).run();
+            countryside c = new countryside();
+            c.run();
+
         }
         class Village
         {
-          public  bool isAstrildeHere;
-           public  Village nextVillage;
-          public  Village prevVillage;
-          public  string Villagename;
+            public bool isAstrildeHere;
+            public Village nextVillage;
+            public Village prevVillage;
+            public string Villagename;
 
         }
+
         class countryside
         {
             Village maple;
@@ -38,6 +39,8 @@ namespace C0731847_V
         }
         class LearningExperiment
         {
+            private Village Toronto;
+
             public void run()
             {
                 Village Toronto;
@@ -56,7 +59,20 @@ namespace C0731847_V
                 c = Toronto;
                 Console.WriteLine(c.Villagename);
             }
+            public void travel()
+            {
+                Village currentvillage = Toronto;
+                while (!currentvillage.isAstrildeHere)
+                {
+                    if (currentvillage.isAstrildeHere)
+                        Console.WriteLine("You found Astrilde in " + currentvillage);
+                    else
+                        currentvillage = currentvillage.nextVillage;
 
+                }
+
+            }
         }
     }
 }
+
